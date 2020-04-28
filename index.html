@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <!-- <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style> -->
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h3>
+      Assignment of Bipolar
+    </h3>
+    <ul>
+      <li><p>Upload an Image.</p></li>
+      <li><p>Drag on the image to draw a rectangle.</p></li>
+      <li><p>Drag from the bottom right corner to resize a rectangle.</p></li>
+      <li><p>Save to save the state. On reload the last saved state is reloaded.</p></li>
+      <li><p>Clear to start again.</p></li>
+    </ul>
+   <form action="upload.php" method="POST" enctype="multipart/form-data"> -->
+    <label>Upload File</label>
+     <p><input type="file" name="file"></p>
+     <p><input type="submit" name="upload" value="upload Image" onclick="clearall()"></p>
+  </form>
+    <button onclick="clearall()">Clear</button>
+    <button onclick="updateStorage()">Save</button>
+   <!-- <label> Upload Image</label>
+   <input type=file name=filename id=file>
+    <button type=button onclick='test()'>Display</button></br> -->
+    
+    <canvas id="backCanvas" style="z-index: 1;
+    position:absolute;
+    left:0px;
+    top:380px;" width="1000" height="1000"></canvas>
+    <canvas id="myCanvas" style="z-index: 2;
+    position:absolute;
+    left:0px;
+    top:380px;" width="1000" height="1000"></canvas>
+  </body>
+  <script src="script.js"></script>
+</html>  
